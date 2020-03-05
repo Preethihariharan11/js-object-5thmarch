@@ -76,11 +76,24 @@ school=object.getSchool();
 console.log("School:",school);
 //location..get and set...!
 let location=object.getLocation();
-console.log("Location",location);
+console.log("Location:",location);
 object.setLocation("chennai");
 location=object.getLocation();
-console.log("Location",location);
+console.log("Location:",location);
 
-//---------------------------------------------
-
+//----------------------------------------------------------------------
 //object creation with function
+function Person(id){
+  let id=id;
+  this.name='hi';
+  this.setId=function(id){
+    _id=id;
+  }
+  this.getId=function(){
+    return _id;
+  }
+}
+
+const person = new Person("10");
+person.setId(2)
+console.log(person.getId())
